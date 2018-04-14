@@ -1,0 +1,108 @@
+body {
+  // sticky footer
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.jp-header {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  position: relative;
+  z-index: 500;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .2);
+  .logo-main {
+    position: relative;
+    z-index: 500;
+  }
+  .nav {
+    display: none;
+    @include media-breakpoint-up(lg) {
+      display: flex;
+    }
+    .nav-item {
+      @include media-breakpoint-up(lg) {
+        margin-right: 2rem;
+      }
+      .nav-link {
+        font-weight: bold;
+        font-size: 2rem;
+        font-family: $ff-37;
+        letter-spacing: .4px;
+        &.active {
+          color: $color-first;
+        }
+      }
+    }
+  }
+}
+
+.jp-content {
+  margin-bottom: 5rem;
+}
+
+.jp-footer {
+  background-color: $color-first;
+  color: $color-light;
+  margin-top: auto; // sticky footer thing
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+}
+
+// burger and mobile menu
+.jp-burger {
+  cursor: pointer;
+  padding: .5rem;
+  position: relative;
+  div {
+    width: 36px;
+    height: 6px;
+    background-color: $color-first;
+    transition: transform .2s;
+    will-change: transform;
+    &:not(:last-child) {
+      margin-bottom: 6px;
+    }
+  }
+
+  &.is-open div:nth-child(1) {
+    transform: rotate(-45deg) translate(-8px, 8px);
+    height: 6px;
+  }
+  &.is-open div:nth-child(2) {
+    opacity: 0;
+  }
+  &.is-open div:nth-child(3) {
+    transform: rotate(45deg) translate(-8px, -9px);
+    height: 6px;
+  }
+
+}
+
+.menu-mob {
+  position: fixed;
+  z-index: 400;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 20vh;
+  opacity: 0;
+  background-color: $color-light;
+  transform: translateY(100%);
+  transition: transform 0.4s;
+  will-change: transform;
+  &.is-open {
+    opacity: 1;
+    transform: translateY(0);
+    transition: transform 0.4s;
+  }
+
+}
+
+// list fix
+ul.nav {
+  padding-right: 0;
+}

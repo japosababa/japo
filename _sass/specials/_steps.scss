@@ -1,0 +1,68 @@
+.jp-steps {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      top: 3.4rem;
+      left: 0;
+      border-top: 6px dotted $color-sec;
+    }
+  }
+
+  .jp-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    text-align: center;
+    background-color: $color-light;
+    @include media-breakpoint-between(md, lg) {
+      padding-right: 1rem;
+      padding-left: 1rem;
+      h3 {
+        font-size: 1.5rem;
+        white-space: nowrap;
+      }
+      .jp-step-desc {
+        font-size: .8rem;
+      }
+    }
+    .jp-step-image, .jp-step-image-active {
+      width: 144px;
+      height: 86px;
+      @include media-breakpoint-between(md, lg) {
+        width: 100px;
+        height: 43px;
+      }
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-top: auto;
+    }
+    .jp-step-image-active {
+      display: none;
+    }
+  }
+
+  .jp-step.highlighted {
+    h3, p {
+      color: $color-first;
+    }
+  }
+
+}
+
+.jp-steps.jp-steps-active {
+  h3, p {
+    color: $color-first;
+  }
+  .jp-step-image {display: none;}
+  .jp-step-image-active {display: block;}
+}

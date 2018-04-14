@@ -1,0 +1,142 @@
+.jp-summary {
+  @include media-breakpoint-up(md) {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  padding: 2rem 1.5rem;
+  background-color: $color-first;
+  color: $color-light;
+  font-weight: 600;
+  a {
+    color: $color-light;
+  }
+  .jp-summary-address {
+    display: none;
+  }
+  .jp-summary-list-wrapper {
+    height: 215px;
+    overflow-y: auto;
+    margin-top: 2rem;
+    margin-left: -1.5rem;
+    .jp-summary-list {
+      position: relative;
+      margin-bottom: 0;
+      padding-right: 0;
+      padding-left: 1.5rem;
+      .jp-summary-item {
+        display: flex;
+        align-items: center;
+        padding-top: .75rem;
+        padding-bottom: .75rem;
+        background-color: $primary;
+        border-top: 2px solid $color-light;
+        @include media-breakpoint-down(md) {
+          font-size: .8rem;
+        }
+        .jp-summary-counter {
+          white-space: nowrap;
+          font-size: initial;
+          margin-right: auto;
+          button {
+            border: none;
+            background-color: transparent;
+            color: $color-light;
+            outline: none;
+            font-size: 1.3rem;
+            font-weight: 500;
+            line-height: 1.2;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  textarea.form-control {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    border-color: $color-light;
+    @include input-placeholder($color-light, 500);
+    color: $color-light !important;
+  }
+  .custom-control.custom-radio {
+    padding-left: 0;
+    padding-right: 1.5rem;
+    .custom-control-label:before, .custom-control-label:after {
+      border: 2px solid $color-light;
+      right: 0;
+      left: auto;
+    }
+  }
+  .jp-summary-total {
+    border-top: 2px solid $color-light;
+    padding-top: 1rem;
+    margin-top: 2rem;
+    @include media-breakpoint-up(md) {
+      margin-top: auto;
+    }
+    .jp-summary-price, .jp-summary-fee, .jp-summary-time {
+      padding-top: .25rem;
+      padding-bottom: .25rem;
+      display: flex;
+      span {
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+// Reset button
+
+.jp-reset {
+  position: relative;
+  padding-right: 30px;
+  line-height: 1.35;
+  font-family: $ff-37;
+  font-size: 1.5rem;
+  white-space: nowrap;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url("../assets/img/icon-basket.svg") no-repeat center;
+    background-size: contain;
+    width: 26px;
+    height: 26px;
+  }
+}
+
+// Second state of the summary (short ver., without green bg)
+.jp-summary.jp-summary-final {
+  background-color: transparent;
+  color: $color-sec;
+  .jp-reset, .jp-summary-list-wrapper, textarea {
+    display: none;
+  }
+  .jp-summary-address {
+    display: block;
+    margin-top: 1rem;
+    padding-bottom: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    border-bottom: 2px solid $color-sec;
+  }
+  .custom-radio {
+    min-height: 0;
+    .custom-control-input:not(:checked) ~ .custom-control-label {
+      display: none;
+      &:after, &:before {
+        display: none;
+      }
+    }
+    .custom-control-input:checked ~ .custom-control-label::before {
+      background-color: $color-sec;
+    }
+  }
+  .jp-summary-total {
+    margin-top: 0;
+    padding-bottom: .75rem;
+    border-bottom: 2px solid $color-sec;
+  }
+}

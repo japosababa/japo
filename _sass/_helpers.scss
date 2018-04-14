@@ -1,0 +1,19 @@
+.js-hidden {
+  display: none !important;
+}
+
+.no-events {
+  pointer-events: none !important;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.jp-placeholder-delivery-layer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10vw 1rem 2rem;
+}

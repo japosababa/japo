@@ -1,0 +1,8 @@
+.columns-2 {
+  columns: 2 80px;
+  > div {
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+}

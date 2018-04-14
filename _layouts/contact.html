@@ -1,0 +1,98 @@
+---
+layout: default
+---
+
+<!-- Sets -->
+<div class="container pt-5">
+
+    <h1 class="t-sec text-primary text-center pt-4">דברו איתנו</h1>
+
+    <div class="row justify-content-center text-center">
+        <div class="col-md-2 mt-3">
+            <h2 class="t-third fw-b bb-dotted-short">טלפון</h2>
+            <p class="fw-n">{{page.phone}}</p>
+        </div>
+        <div class="col-md-2 mt-3">
+            <h2 class="t-third fw-b bb-dotted-short">כתובת</h2>
+            <p class="fw-n">{{page.address}}</p>
+        </div>
+        <div class="col-md-2 mt-3">
+            <h2 class="t-third fw-b bb-dotted-short">שעות פתיחה</h2>
+            <p class="fw-n">{{page.hours}}</p>
+        </div>
+    </div>
+
+    <form class="jp-form-grid pt-5" name="contact" data-netlify="true" id="contactForm" netlify-honeypot="bot-field"
+          novalidate>
+
+        <input type="text" name="bot-field" class="form-control js-hidden" placeholder="שם">
+
+        <div class="form-row justify-content-center">
+            <div class="form-group col-md-3">
+                <input name="name" type="text" class="form-control" placeholder="שם ומשפחה" required>
+            </div>
+            <div class="form-group col-md-3">
+                <input name="phone" type="tel" class="form-control" placeholder="טלפון" required>
+            </div>
+        </div>
+        <div class="form-row justify-content-center">
+            <div class="form-group col-md-6">
+                <input name="email" type="email" class="form-control" placeholder="מייל" required>
+            </div>
+        </div>
+        <div class="form-row justify-content-center">
+            <div class="form-group col-md-6">
+                <textarea name="message" class="form-control" rows="4" placeholder="תוכן ההודעה" required></textarea>
+            </div>
+        </div>
+        <div class="form-row justify-content-center">
+            <div class="form-group col-md-6 text-center">
+                <button class="btn btn-secondary jp-btn-lg" type="submit">מעבר לתשלום</button>
+            </div>
+        </div>
+    </form>
+
+
+    <!-- Validation -->
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+
+        window.addEventListener('load', function () {
+            var form = document.getElementById('contactForm');
+
+            form.addEventListener('submit', function (event) {
+                if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                } else {
+                    event.preventDefault();
+                    var $form = $(this);
+                    var thanksString = '<div class="form-row justify-content-center pt-5" id="formSent"><div class="col-md-6 h1 b-solid text-center text-primary py-5">{{page.message}}</div></div>';
+                    $.post($form.attr("action"), $form.serialize()).then(function () {
+                        $('#contactForm').html(thanksString);
+                    });
+                }
+                form.classList.add('was-validated');
+            }, false);
+        }, false);
+
+    </script>
+
+
+    <!--{% for set in site.data.sets.sets %}
+    {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+
+    <div class="col-sm-7 col-lg-5 col-xl-4 text-center d-flex flex-column align-items-center px-xl-5">
+        <h2 class="ff-voltage text-uppercase my-5">{{set.name}}</h2>
+        <img class="img-fluid mb-5" src="{{set.image}}" height="200" alt="Japo. {{set.name}}">
+        <p>{{set.desc}}</p>
+    </div>
+
+    {% if thecycle == 'even' %}
+    <div class="w-100"></div>
+    {% endif %}
+
+    {% endfor %}-->
+
+
+</div>

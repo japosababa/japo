@@ -1,0 +1,21 @@
+sets:
+  - desc: >-
+      טרטר טונה אדומה מתובלת היטב עם כרוב אדום, מלפפון, ג'ינג'ר כבוש ועשבי
+      תיבול, צ'יפס בטטה, שומשום שחור, רוטב איולי וואסבי
+    image: /assets/img/uploads/tuna-roll@2x.png
+    name: Red Tuna Roll
+  - desc: >-
+      דג קוד לבן בציפוי פאנקו עם מלפפון, צנוניות, גזר, בצל ירוק עשבי תיבול, כרוב
+      אדום, פקאן מסוכר רוטב איולי וואסבי
+    image: /assets/img/uploads/salmon-roll@2x.png
+    name: Salmon Fish Roll
+  - desc: >-
+      עוף קצוץ ומתובל עם מלפפון, אבוקדו, סלק, חסה, בזיליקום עירית, שאלוט פריכים
+      איולי וואסבי
+    image: /assets/img/uploads/chicken-roll@2x.png
+    name: Crispy Chicken Roll
+  - desc: >-
+      כרובית מטוגנת, צ'יפס בטטה, סלק, בזיליקום, בצל ירוק חסה ושקדים קרם דלעת
+      קארי-קוקוס
+    image: /assets/img/uploads/vegie-roll@2x.png
+    name: All Vegie Roll

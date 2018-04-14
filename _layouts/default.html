@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="{{ page.lang | default: site.lang }}">
+
+{% include head.html %}
+
+{% if page.layout == 'contact' or page.layout == 'delivery' %}
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+{% endif %}
+
+<body>
+
+{% if site.data.placeholder.placeholder %}
+<style>
+    .jp-placeholder {
+        width: 100vw;
+        height: 100vh;
+        background-image: url('/assets/img/jp-placeholder-sm.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    @media screen and (min-width: 480px) {
+        .jp-placeholder {
+            background-image: url('/assets/img/jp-placeholder.jpg');
+            background-position: center right;
+        }
+    }
+</style>
+<div class="jp-placeholder"></div>
+{% else %}
+
+    <!-- Header -->
+    {% include header.html %}
+
+    <!-- Content -->
+    <div class="jp-content" id="jp-content">
+        {{ content }}
+    </div>
+
+    <!-- Footer -->
+    {% include footer.html %}
+
+    <!-- Mobile Menu -->
+    {% include mobmenu.html %}
+
+    <!-- Quick Order Button -->
+    {% unless page.layout == 'delivery' %}
+        <a href="/delivery/" class="btn-order" id="orderButton"><span>הזמן עכשיו</span></a>
+    {% endunless %}
+
+    {% if page.layout == 'delivery' %}
+        {% unless site.data.placeholder.placeholder-delivery %}
+            {% include modal-warning.html %}
+            {% include modal-thanks.html %}
+            <script src="/js/checkout.js" defer></script>
+        {% endunless %}
+    {% endif %}
+
+    <script>
+        // check if we get to the bottom and hide orderButton
+        (function () {
+            var orderButton = document.getElementById('orderButton');
+            if (screen.width <= 600 && orderButton) {
+                window.addEventListener('scroll', function (event) {
+                    if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 300)) {
+                        orderButton.style.display = 'none';
+                    } else {
+                        orderButton.style.display = '';
+                    }
+
+                });
+            }
+        })();
+    </script>
+
+{% endif %}
+
+</body>
+
+</html>

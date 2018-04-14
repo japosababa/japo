@@ -1,0 +1,149 @@
+.jp-picker {
+  @include media-breakpoint-up(md) {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  border: $line-dotted;
+  padding-left: .4rem;
+  padding-right: .4rem;
+  h3 {
+    text-align: center;
+  }
+  .jp-btn {
+    min-width: 170px;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    small {
+      padding-right: .5rem;
+      font-weight: bold;
+      pointer-events: none;
+    }
+  }
+  .jp-picker-header {
+    padding: 1.8rem 1.1rem;
+    border-bottom: $line-dotted;
+  }
+}
+
+.jp-picker .js-picker-body-sets {
+  @include media-breakpoint-up(md) {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  .jp-set {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 2rem;
+    position: relative;
+    @include media-breakpoint-up(sm) {
+      &:nth-child(odd) {
+        border-left: $line-dotted;
+      }
+      &:nth-child(even):not(:last-child) {
+        &::after {
+          content: "";
+          position: absolute;
+          z-index: 2;
+          left: 13px;
+          bottom: 0;
+          width: calc(200% - 26px);
+          border-top: $line-dotted;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          z-index: 1;
+          left: 13px;
+          bottom: -6px;
+          width: calc(200% - 26px);
+          height: 18px;
+          background-color: $color-light;
+        }
+      }
+      .jp-set-header {
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+        margin-bottom: 1rem;
+        margin-top: 1.05rem;
+      }
+    }
+    .jp-set-image {
+      width: 166px;
+      height: 113px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-bottom: 1rem;
+    }
+    .jp-set-desc {
+      font-size: .9rem;
+    }
+    .jp-set-button {
+      width: 32px;
+      height: 32px;
+      color: $color-light;
+      background-color: $color-sec;
+      position: absolute;
+      top: 20px;
+      right: 26px;
+      border-color: transparent;
+      outline: none;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 32px;
+      cursor: pointer;
+      @include media-breakpoint-down(lg) {
+        position: static;
+        margin-bottom: .7rem;
+        align-self: center;
+      }
+      &.active {
+        background-color: $color-first;
+      }
+    }
+  }
+}
+
+.jp-picker .js-picker-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  .jp-picker-block {
+    padding: 1.8rem 1.1rem;
+    &:not(:last-child) {
+      border-bottom: $line-dotted;
+    }
+  }
+  .jp-picker-block-double {
+    flex: 3;
+    display: flex;
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    h3 {
+      margin-bottom: 1rem;
+    }
+    > div {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-top: 1.6rem;
+      padding-bottom: 1.6rem;
+      padding-left: .5rem;
+    }
+    > div:last-child {
+      padding-right: .5rem;
+    }
+    & > div:first-child {
+      border-left: $line-dotted;
+    }
+  }
+}

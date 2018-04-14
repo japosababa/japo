@@ -1,0 +1,383 @@
+---
+layout: default
+---
+
+
+{% if site.data.placeholder.placeholder-delivery %}
+
+
+<div class="jp-placeholder-delivery-layer">
+    <img class="img-fluid" src="/assets/img/placeholder-delivery-image.png">
+    <h1 class="t-main mt-3">בקרוב זה יקרה! שווה לחכות</h1>
+</div>
+
+{% else %}
+
+<!-- Steps -->
+<div class="container pt-5 pb-3 jp-divider d-none" id="jp-steps-container">
+    <div class="row justify-content-center">
+        <div class="col-lg-10 px-md-5">
+            <div class="jp-steps jp-steps-active"> <!-- TODO  -->
+                <div class="jp-step">
+                    <h3 class="t-main">שלב 1</h3>
+                    <p class="jp-step-desc">בחר קערה או מגולגל</p>
+                    <div class="jp-step-image"
+                         style="background-image: url('/assets/img/step1-active@2x.png');"></div>
+                    <div class="jp-step-image-active"
+                         style="background-image: url('/assets/img/step1-active@2x.png');"></div>
+
+                </div>
+                <div class="jp-step">
+                    <h3 class="t-main">שלב 2</h3>
+                    <p class="jp-step-desc">בחר את הבסיס למנה</p>
+                    <div class="jp-step-image" style="background-image: url('/assets/img/step2@2x.png');"></div>
+                    <div class="jp-step-image-active"
+                         style="background-image: url('/assets/img/step2-active@2x.png');"></div>
+                </div>
+                <div class="jp-step">
+                    <h3 class="t-main">שלב 3</h3>
+                    <p class="jp-step-desc">בחר את הבסיס למנה</p>
+                    <div class="jp-step-image" style="background-image: url('/assets/img/step3@2x.png');"></div>
+                    <div class="jp-step-image-active"
+                         style="background-image: url('/assets/img/step3-active@2x.png');"></div>
+                </div>
+                <div class="jp-step">
+                    <h3 class="t-main">שלב 4</h3>
+                    <p class="jp-step-desc">הוסף שלל ירקות</p>
+                    <div class="jp-step-image" style="background-image: url('/assets/img/step4@2x.png');"></div>
+                    <div class="jp-step-image-active"
+                         style="background-image: url('/assets/img/step4-active@2x.png');"></div>
+                </div>
+                <div class="jp-step">
+                    <h3 class="t-main">שלב 5</h3>
+                    <p class="jp-step-desc">בחר את הבסיס למנה</p>
+                    <div class="jp-step-image" style="background-image: url('/assets/img/step5@2x.png');"></div>
+                    <div class="jp-step-image-active"
+                         style="background-image: url('/assets/img/step5-active@2x.png');"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container py-5">
+    <div class="row justify-content-center py-3">
+
+        <!-- Picker -->
+        <div class="col-md-7 d-block d-md-flex flex-column" id="template-picker">
+
+            <div class="jp-picker">
+
+                <div class="jp-picker-header">
+                    <h3 class="t-sec">בחירת מנה</h3>
+                    <div class="d-flex flex-column flex-lg-row justify-content-around">
+                        <a class="btn jp-btn active js-food-type-link" href="#sets">מנות קבועות</a>
+                        <a class="btn jp-btn js-food-type-link" href="#rolls-bowls">רול
+                            <span class="jp-btn-inner"><span>₪</span>{{page.price-roll}}</span>
+                        </a>
+                        <a class="btn jp-btn js-food-type-link" href="#rolls-bowls">בול
+                            <span class="jp-btn-inner"><span>₪</span>{{page.price-bowl}}</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Sets -->
+                <div class="js-picker-body-sets" data-food-type="sets">
+                    <div class="row h-100">
+                        {% for set in site.data.sets.sets %}
+                        <div class="col-sm-6 jp-set">
+                            <div class="jp-set-button">+</div>
+                            <h3 class="jp-set-header ff-voltage">{{set.name}}</h3>
+                            <div class="jp-set-image" style="background-image: url('{{set.image}}');"></div>
+                            <p class="jp-set-desc">{{set.desc}}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <!-- Bowls or rolls  -->
+                <div class="js-picker-body js-hidden" data-food-type="rolls-bowls">
+
+                    <div class="jp-picker-block">
+                        <h3 class="t-sec">בחירת בסיס</h3>
+                        <div class="d-flex flex-column flex-lg-row justify-content-around">
+                            <a class="btn jp-btn js-base-link" href="#">אורז</a>
+                            <a class="btn jp-btn js-base-link" href="#">אטריות שעועית</a>
+                            <a class="btn jp-btn js-base-link" href="#">ירקות</a>
+                        </div>
+                    </div>
+
+                    <div class="jp-picker-block">
+                        <h3 class="t-sec">בחירת תוספת עיקרית</h3>
+                        <div class="d-flex flex-row flex-wrap justify-content-center align-items-center">
+
+                            <!-- Bases Radios -->
+                            {% for base in page.bases %}
+                            <div class="custom-control custom-radio custom-control-dark">
+                                <input type="radio" id="base{{forloop.index}}" name="base" class="custom-control-input">
+                                <label class="custom-control-label" for="base{{forloop.index}}">{{ base.base-name
+                                    }}</label>
+                            </div>
+                            {% endfor %}
+
+                        </div>
+                    </div>
+
+                    <div class="jp-picker-block-double">
+                        <div>
+                            <h3 class="t-sec">בחירת ירקות</h3>
+                            <div class="columns-2">
+
+                                <!-- Vegetables Chekboxes -->
+                                {% for veg in page.vegs %}
+                                <div class="custom-control custom-checkbox custom-control-dark">
+                                    <input type="checkbox" class="custom-control-input" id="veg{{forloop.index}}">
+                                    <label class="custom-control-label" for="veg{{forloop.index}}">{{ veg.veg-name
+                                        }}</label>
+                                </div>
+                                {% endfor %}
+
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="t-sec">בחירת תיבול</h3>
+                            <div class="columns-2">
+
+                                <!-- Dressings Chekboxes -->
+                                {% for dressing in page.dressings %}
+                                <div class="custom-control custom-checkbox custom-control-dark">
+                                    <input type="checkbox" class="custom-control-input" id="dressing{{forloop.index}}">
+                                    <label class="custom-control-label" for="dressing{{forloop.index}}">{{
+                                        dressing.dressing-name }}</label>
+                                </div>
+                                {% endfor %}
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="my-5 mb-md-0 text-left">
+                <a class="btn btn-lg btn-secondary jp-btn-lg" href="#" id="addToSummaryButton">הוסף להזמנה</a>
+            </div>
+
+        </div>
+
+        <!-- Summary -->
+        <div class="col-xl-4 col-md-5 d-block d-md-flex flex-column" id="template-summary">
+            <div class="jp-summary">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h3 class="t-sec mb-0">פרטי הזמנה</h3>
+                    <a class="jp-reset js-hidden" href="#">איפוס הזמנה</a>
+                </div>
+                <p class="mt-2" id="jpSummaryPlaceholderText">ההזמנה עוד ריקה, למה אתם מחנים?</p>
+                <div class="jp-summary-body js-hidden">
+                    <div class="jp-summary-address">
+                        <div>שם ושם משפחה</div>
+                        <div>כתובת</div>
+                        <div>עיר</div>
+                        <div>מיקוד</div>
+                    </div>
+                    <div class="jp-summary-list-wrapper">
+                        <ul class="jp-summary-list">
+                            <li class="jp-summary-item">
+                                <div class="jp-summary-name">טונה רול</div>
+                                <div class="jp-summary-counter">
+                                    <span class="jp-summary-price">35</span>
+                                    <button type="button">−</button>
+                                    <button type="button">+</button>
+                                </div>
+                            </li>
+                            <li class="jp-summary-item">
+                                <div class="jp-summary-name">בול טונה</div>
+                                <div class="jp-summary-counter">
+                                    <span class="jp-summary-price">39</span>
+                                    <button type="button">−</button>
+                                    <button type="button">+</button>
+                                </div>
+                            </li>
+                            <li class="jp-summary-item">
+                                <div class="jp-summary-name">Salmon Fish Roll</div>
+                                <div class="jp-summary-counter">
+                                    <span class="jp-summary-price">39</span>
+                                    <button type="button">−</button>
+                                    <button type="button">+</button>
+                                </div>
+                            </li>
+                            <li class="jp-summary-item">
+                                <div class="jp-summary-name">Crispy Chicken Roll</div>
+                                <div class="jp-summary-counter">
+                                    <span class="jp-summary-price">39</span>
+                                    <button type="button">−</button>
+                                    <button type="button">+</button>
+                                </div>
+                            </li>
+                            <li class="jp-summary-item">
+                                <div class="jp-summary-name">טונה רול</div>
+                                <div class="jp-summary-counter">
+                                    <span class="jp-summary-price">35</span>
+                                    <button type="button">−</button>
+                                    <button type="button">+</button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <textarea class="form-control" rows="4" placeholder="הערות כלליות להזמנה"></textarea>
+                    <div class="custom-control custom-radio mb-2">
+                        <input type="radio" id="jp-pickup" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="jp-pickup">איסוף עצמי</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="jp-delivery" name="customRadio" class="custom-control-input" checked>
+                        <label class="custom-control-label" for="jp-delivery">משלוח</label>
+                    </div>
+                </div>
+                <div class="jp-summary-total">
+                    <div class="jp-summary-price">סך לתשלום: <span id="jpSummaryTotalPrice">0</span>&nbsp;₪</div>
+                    <div class="jp-summary-fee">דמי משלוח: <span>9</span>&nbsp;₪</div>
+                    <div class="jp-summary-time">זמן הכנה: <span>20 דקות</span></div>
+                </div>
+            </div>
+            <div class="text-left">
+                <a class="btn btn-lg btn-secondary jp-btn-lg disabled mt-5" href="#" id="jpModalButtonOpen">המשך</a>
+            </div>
+            <a class="link-back mt-3 ff-37 js-hidden" href="#" id="backButton">חזרה להזמנה</a>
+        </div>
+
+        <!-- Address -->
+        <div class="col-md-7 d-flex flex-column order-first order-md-2 js-hidden" id="template-address">
+            <div class="col-lg-10 mr-auto">
+                <div class="jp-address">
+                    <h3 class="t-sec mb-3 pr-lg-2">פרטי קשר</h3>
+                    <form class="jp-form-grid">
+                        <div class="form-row">
+                            <div class="form-group col-md">
+                                <label for="inputName">שם פרטי</label>
+                                <input type="text" class="form-control" id="inputName">
+                            </div>
+                            <div class="form-group col-md">
+                                <label for="inputSecondName">שם משפחה</label>
+                                <input type="text" class="form-control" id="inputSecondName">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md">
+                                <label for="inputPhone">טלפון</label>
+                                <input type="tel" class="form-control" id="inputPhone">
+                            </div>
+                            <div class="form-group col-md">
+                                <label for="inputEmail">מייל</label>
+                                <input type="email" class="form-control" id="inputEmail">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col">
+                                <label for="inputAddressMain">כתובת למשלוח - רחוב, מספר בית ודירה</label>
+                                <input type="text" class="form-control" id="inputAddressMain">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md">
+                                <label for="inputCity">עיר</label>
+                                <input type="text" class="form-control" id="inputCity">
+                            </div>
+                            <div class="form-group col-md">
+                                <label for="inputPostal">מיקוד</label>
+                                <input type="text" class="form-control" id="inputPostal">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col pt-5">
+                                <label for="textareaNotes">הערות למשלוח</label>
+                                <textarea class="form-control" id="textareaNotes" rows="4"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md mb-0"></div>
+                            <div class="form-group col-md-5 text-left pt-3 mb-5 mb-md-2">
+                                <a class="btn btn-block btn-secondary jp-btn" href="#" id="buttonGoToPayment">מעבר
+                                    לתשלום</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Payment -->
+        <div class="col-md-7 d-flex flex-column order-first order-md-2 js-hidden" id="template-payment">
+            <div class="col-lg-10 mr-auto">
+                <div class="jp-address">
+                    <h3 class="t-sec mb-3 pr-lg-2">פרטי כרטיס אשראי</h3>
+                    <h3 class="t-sec mb-3 pr-lg-2"></h3>
+                    <form class="jp-form-grid" id="paymentForm" name="payment" netlify>
+                        <div class="form-row">
+                            <div class="form-group col">
+                                <label for="inputCardNumber">מספר כרטיס</label>
+                                <input type="text" class="form-control" id="inputCardNumber">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-4 col-md-3">
+                                <label for="inputValidYear">תוקף</label>
+                                <input type="text" class="form-control" id="inputValidYear" placeholder="שנה">
+                            </div>
+                            <div class="form-group col-4 col-md-3">
+                                <label for="inputSecondName">&nbsp;</label>
+                                <input type="text" class="form-control" id="inputValidMonth" placeholder="חודש">
+                            </div>
+                            <div class="form-group col-4 col-md-6">
+                                <label for="inputCvc">CVC</label>
+                                <input type="text" class="form-control" id="inputCvc">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col">
+                                <label for="inputAddressBilling">כתובת למשלוח - רחוב, מספר בית ודירה</label>
+                                <input type="text" class="form-control" id="inputAddressBilling">
+                            </div>
+                        </div>
+                        <div class="form-row mt-3">
+                            <div class="form-group col-md">
+                                <div class="custom-control custom-checkbox custom-control-dark mr-0">
+                                    <input type="checkbox" class="custom-control-input" id="inputSaveData">
+                                    <label class="custom-control-label" for="inputSaveData">שמור פרטים להזמנה
+                                        הבאה</label>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-5 text-left mb-5 mb-md-2">
+
+                                <!-- TODO Fake input for testing -->
+                                <input style="position: absolute; left: 0; bottom: 1000vh; visibility: hidden;"
+                                       type="text" name="order"
+                                       value="Ping from the site. There will be a description of the order here soon">
+                                <button type="submit" class="btn btn-block btn-secondary jp-btn" id="buttonToPay">שלח
+                                    הודעה
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- TODO Form ajax for testing -->
+        <script>
+            $("#paymentForm").submit(function (e) {
+                e.preventDefault();
+                var jpModalThanks = document.getElementById('jpModalThanks');
+                var $form = $(this);
+                var thanksString = '<div class="d-flex justify-content-center" dir="ltr">The order is sent. Check a test ping in your mail inbox (btw we need a design for this message)</div>';
+                $.post($form.attr("action"), $form.serialize()).then(function () {
+                    jpModalThanks.classList.remove('js-hidden');
+                });
+            });
+        </script>
+
+    </div>
+</div>
+
+{% endif %}

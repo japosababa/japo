@@ -1,0 +1,33 @@
+@include media-breakpoint-down(md) {
+  $line-dotted: 2px dotted $color-sec;
+}
+
+hr.jp-divider {
+  border-top: $line-dotted;
+}
+
+.bb-dotted {
+  border-bottom: $line-dotted;
+}
+
+.br-dotted {
+  border-right: $line-dotted;
+}
+
+.bb-dotted-short {
+  position: relative;
+  padding-bottom: 1rem;
+  white-space: nowrap;
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: .3rem;
+    left: calc(50% - 25px);
+    width: 50px;
+    border-bottom: $line-dotted;
+  }
+}
+
+.b-solid {
+  border: 2px solid $color-sec;
+}

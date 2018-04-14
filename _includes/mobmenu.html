@@ -1,0 +1,35 @@
+<!-- Mobile Menu-->
+<div class="menu-mob" id="mobMenu">
+    <ul class="nav flex-column justify-content-center align-items-center">
+
+        {% assign menu_pages = site.html_pages | where:"inHeader","true" | sort: 'order' %}
+        {% for item in menu_pages %}
+        <li class="nav-item t-sec mt-3">
+            <a class="{% if page.url == item.url %}active {% endif %}nav-link" href="{{item.url}}">{{item.title}}</a>
+        </li>
+        {% endfor %}
+
+        <li class="nav-item mt-3">
+            <a class="nav-link" href="{{site.data.meta.facebook}}">
+                <img src="../assets/img/icon-facebook.svg" height="40" width="40"/></a>
+        </li>
+        <li class="nav-item mt-3">
+            <a class="nav-link" href="{{site.data.meta.instagram}}">
+                <img src="../assets/img/icon-instagram.svg" height="40" width="40"/></a>
+        </li>
+    </ul>
+</div>
+
+<script>
+    // Handle mobile menu
+    var burgerButton = document.getElementById('burgerButton');
+    var mobMenu = document.getElementById('mobMenu');
+
+    burgerButton.addEventListener('click', function (e) {
+        e.preventDefault();
+        this.classList.toggle('is-open');
+        mobMenu.classList.toggle('is-open');
+        document.body.classList.toggle('no-scroll');
+    });
+
+</script>

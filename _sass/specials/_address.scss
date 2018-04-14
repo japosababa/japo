@@ -1,0 +1,14 @@
+.jp-address {
+  padding-top: 2rem;
+}
+
+.link-back {
+  display: flex;
+  font-size: 1.2rem;
+  letter-spacing: .3px;
+  &:before {
+    content: url('/assets/img/arrow.svg');
+    margin-left: 10px;
+    margin-top: 2px;
+  }
+}

@@ -1,0 +1,69 @@
+.jp-btn {
+  padding: .5rem 1rem 0.25rem;
+  font-size: 1.8rem;
+  font-family: $ff-37;
+  letter-spacing: .4px;
+  color: $color-light;
+  line-height: 1;
+  background-color: $color-sec;
+  @include media-breakpoint-down(lg) {
+    font-size: 1.7rem;
+  }
+  &:hover {
+    background-color: $color-first;
+    color: $color-light;
+    border-color: $color-first;
+  }
+  &.active {
+    background-color: $color-first;
+    pointer-events: none;
+    border-color: $color-first;
+  }
+}
+
+.jp-btn .jp-btn-inner {
+  pointer-events: none;
+  font-size: 80%;
+  span {
+    font-size: 80%;
+  }
+}
+
+.jp-btn-lg {
+  @extend .jp-btn;
+  padding: .75rem 3.75rem 0.5rem;
+  font-size: 2.2rem;
+  @include media-breakpoint-down(md) {
+    font-size: 1.6rem;
+  }
+}
+
+.btn-order {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  width: 120px;
+  height: 120px;
+  background-color: $color-sec;
+  color: $color-light;
+  border-radius: 100%;
+  font-size: 2rem;
+  font-family: $ff-37;
+  letter-spacing: .7px;
+  line-height: 1;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  span {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: block;
+  }
+  @include media-breakpoint-up(sm) {
+    top: 140px;
+    left: 110px;
+    bottom: auto;
+    right: auto;
+  }
+}

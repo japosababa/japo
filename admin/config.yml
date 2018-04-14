@@ -1,0 +1,97 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+
+media_folder: "/assets/img/uploads" # Media files will be stored in the repo under images/uploads
+
+collections:
+- label: "Pages"
+  name: "pages"
+  delete: false
+  files:
+    - label: "Contact Page"
+      name: "contact"
+      file: "contact.md"
+      fields:
+        - {label: Title, name: title, widget: string}
+        - {label: Hours, name: hours, widget: string}
+        - {label: Address, name: address, widget: string}
+        - {label: Phone, name: phone, widget: string}
+        - {label: Message after form submitting, name: message, widget: string}
+        - {label: Show in the header, name: inHeader, widget: boolean}
+        - {label: Order in the header, name: order, widget: number, default: 1, valueType: "int", min: 1, max: 100}
+    - label: "Delivery Page"
+      name: "delivery"
+      file: "delivery.md"
+      fields:
+         - {label: Title, name: title, widget: string}
+         - label: Bases
+           name: bases
+           widget: list
+           fields:
+             - {label: Base Name, name: base-name, widget: string}
+         - label: Vegetables
+           name: vegs
+           widget: list
+           fields:
+             - {label: Vegetable Name, name: veg-name, widget: string}
+         - label: Dressings
+           name: dressings
+           widget: list
+           fields:
+             - {label: Dressing Name, name: dressing-name, widget: string}
+         - {label: Show in the header, name: inHeader, widget: boolean}
+         - {label: Set Price, name: price-set, widget: number, default: 0, valueType: "int", min: 0}
+         - {label: Bowl Price, name: price-bowl, widget: number, default: 0, valueType: "int", min: 0}
+         - {label: Roll Price, name: price-roll, widget: number, default: 0, valueType: "int", min: 0}
+         - {label: Order in the header, name: order, widget: number, default: 0, valueType: "int", min: 0, max: 100}
+    - label: "Menu Page"
+      name: "menu"
+      file: "menu.md"
+      fields:
+         - {label: Title, name: title, widget: string}
+         - {label: Show in the header, name: inHeader, widget: boolean}
+         - {label: Order in the header, name: order, widget: number, default: 1, valueType: "int", min: 1, max: 100}
+    - label: "Home Page"
+      name: "index"
+      file: "index.md"
+      fields:
+        - {label: Title, name: title, widget: string}
+        - {label: Body, name: body, widget: markdown}
+        - {label: Show in the header, name: inHeader, widget: boolean}
+        - {label: Order in the header, name: order, widget: number, default: 1, valueType: "int", min: 1, max: 100}
+
+- label: "Sets"
+  name: "sets"
+  files:
+    - label: "Sets List"
+      name: "sets-list"
+      file: "_data/sets.yml"
+      fields:
+        - label: Sets
+          name: sets
+          widget: list
+          fields:
+            - {label: Set Name, name: name, widget: string}
+            - {label: Set Image, name: image, widget: image}
+            - {label: Set Description, name: desc, widget: string}
+
+- label: "Meta Data"
+  name: "meta"
+  files:
+    - label: "Placeholders"
+      name: "placeholder"
+      file: "_data/placeholder.yml"
+      delete: false
+      fields:
+      - {label: Close the site (show the placeholder picture instead of the site), name: placeholder, widget: boolean}
+      - {label: Close the delivery page (show the "Coming Soon" placeholder instead of the delivery page), name: placeholder-delivery, widget: boolean}
+    - label: "Links"
+      name: "links"
+      file: "_data/meta.yml"
+      delete: false
+      fields:
+        - {label: Facebook, name: facebook, widget: string}
+        - {label: Instagram, name: instagram, widget: string}
+        - {label: Phone Number, name: phone, widget: string}
+        - {label: Copyright Line, name: copyright, widget: string}

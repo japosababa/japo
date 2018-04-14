@@ -1,0 +1,29 @@
+// Heebo (main font)
+@import url('https://fonts.googleapis.com/css?family=Heebo:300,400,500,700&subset=hebrew');
+
+// HighVoltage
+@font-face {
+  font-family: 'HighVoltage';
+  src: url('../assets/fonts/HighVoltage-Rough.woff2') format('woff2'),
+  url('../assets/fonts/HighVoltage-Rough.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Font 37
+
+@font-face {
+  font-family: 'font37';
+  src: url('../assets/fonts/font37-bold-webfont.woff2') format('woff2'),
+  url('../assets/fonts/font37-bold-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'font37';
+  src: url('../assets/fonts/font37-regular-webfont.woff2') format('woff2'),
+  url('../assets/fonts/font37-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

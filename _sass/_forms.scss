@@ -1,0 +1,60 @@
+// Custom checkboxes and radios (dark, smaller)
+.custom-control-dark {
+  font-size: .9rem;
+  align-items: center;
+  padding-right: 1.3rem;
+  padding-left: .75rem;
+  padding-bottom: .5rem;
+  margin-right: .75rem;
+  @include media-breakpoint-up(lg) {
+    margin-right: 2.5rem;
+  }
+  .custom-control-label:before, .custom-control-label:after {
+    border: 2px solid $color-sec;
+    width: 14px;
+    height: 14px;
+    right: 0;
+    left: auto;
+    background-color: transparent;
+  }
+
+  .custom-control-input:checked ~ .custom-control-label::before {
+    background-color: $color-first;
+  }
+
+  .custom-control-input:checked ~ .custom-control-label::after {
+    border: 2px solid $color-first;
+  }
+
+}
+
+// Form grid
+.jp-form-grid {
+  .form-row {
+    & > .col, & > [class*="col-"] {
+      @include media-breakpoint-up(lg) {
+        padding-right: 1rem;
+        padding-left: 1rem;
+      }
+    }
+  }
+}
+
+// Invalid alert
+.was-validated .form-control:invalid {
+  animation: shake .5s;
+}
+
+@keyframes shake {
+  from, to {
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    transform: translate3d(10px, 0, 0);
+  }
+}

@@ -1,0 +1,84 @@
+a {
+  transition: color .2s;
+}
+
+
+p {
+  font-weight: 300;
+  letter-spacing: .3px;
+  @include media-breakpoint-down(md) {
+    font-size: .9rem;
+  }
+}
+
+// Weights
+
+.fw-l {
+  font-weight: 300;
+}
+
+.fw-n {
+  font-weight: normal;
+}
+
+.fw-b {
+  font-weight: bold;
+}
+
+// Families
+
+.ff-voltage {
+  font-family: $ff-voltage;
+  letter-spacing: 1px;
+}
+
+.ff-37 {
+  font-family: $ff-37;
+}
+
+// Titles
+.t-main, .t-sec {
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: .4px;
+  margin-bottom: .75rem;
+}
+
+.t-main, .h1, h1 {
+  font-family: $ff-37;
+  font-size: 3.1rem;
+  @include media-breakpoint-down(md) {
+    font-size: 2.7rem;
+  }
+}
+
+.t-sec {
+  font-size: 2.4rem;
+  font-family: $ff-37;
+}
+
+.t-third {
+  font-size: 2.2rem;
+  font-family: $ff-37;
+}
+
+.t-voltage {
+  font-family: $ff-voltage;
+  white-space: nowrap;
+  &.t-voltage-lg {
+    line-height: 1.2;
+    text-align: center;
+    font-size: 90px;
+    @include media-breakpoint-between(sm, md) {
+      font-size: 180px;
+    }
+    @include media-breakpoint-up(xl) {
+      font-size: 120px;
+    }
+    .ls-wider {
+      letter-spacing: 12px;
+    }
+
+  }
+}
+
