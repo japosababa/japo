@@ -36,9 +36,9 @@ sets:
       תיבול, שאלוט פריך
     image: /assets/img/uploads/roll.png
     name: SMOKY JAPO
-  - image: /assets/img/uploads/chicken-roll@2x.png
+  - image: /assets/img/uploads/divider.png
   - desc: קערות אורז עם תוספות
-    image: /assets/img/uploads/how-to-japo.png
+    image: /assets/img/uploads/salmon-roll@2x.png
     name: JAPO BOWLS
   - desc: >-
       ג׳אפו בול אטלנטי - סלמון טרי, ברוקולי, אצות וואקמה, ג'ינג'ר כבוש, אבוקדו,
@@ -58,7 +58,7 @@ sets:
     image: /assets/img/uploads/bowl1.png
     name: HOT BOWL
   - desc: התעוררנו יצירתיים? לכו על זה
-    image: /assets/img/uploads/salmon-roll@2x.png
+    image: /assets/img/uploads/how-to-japo.png
     name: JAPO FREESTYLE
   - desc: אורז לבן | אורז מלא | בורגול | עלים ירוקים | קייל
     image: /assets/img/uploads/step1.png
