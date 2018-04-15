@@ -84,9 +84,9 @@ sets:
   - desc: 'גלידה קרם קוקוס, רוטב מנגו, אננס צלוי, קוקוס קלוי, בוטנים'
     image: /assets/img/uploads/bowls.jpeg
     name: BOWL
-  - desc: כדור גלידה עטוף בבצק אורז
+  - desc: מוצ׳י - כדור גלידה עטוף בבצק אורז
     image: /assets/img/uploads/bowls.jpeg
-    name: מוצ'י
+    name: MOCHI
   - desc: 'בננה צלוייה ופונדט שוקולד אגוזים, קוקוס קלוי, שקדים קלויים'
     image: /assets/img/uploads/bowls.jpeg
     name: ROLL
