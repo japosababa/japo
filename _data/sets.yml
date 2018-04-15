@@ -82,11 +82,11 @@ sets:
     image: /assets/img/uploads/japo.jpg
     name: JAPO SWEET
   - desc: 'גלידה קרם קוקוס, רוטב מנגו, אננס צלוי, קוקוס קלוי, בוטנים'
-    image: /assets/img/uploads/bowls.jpeg
+    image: /assets/img/uploads/sweet.png
     name: BOWL
   - desc: מוצ׳י - כדור גלידה עטוף בבצק אורז
-    image: /assets/img/uploads/bowls.jpeg
+    image: /assets/img/uploads/sweet.png
     name: MOCHI
   - desc: 'בננה צלוייה ופונדט שוקולד אגוזים, קוקוס קלוי, שקדים קלויים'
-    image: /assets/img/uploads/bowls.jpeg
+    image: /assets/img/uploads/sweet.png
     name: ROLL
