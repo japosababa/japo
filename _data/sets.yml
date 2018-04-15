@@ -1,5 +1,5 @@
 sets:
-  - desc: הרולים שלנו - תן לנו לעשות את העבודה
+  - desc: הרולים שלנו - תנו לנו לעשות את העבודה
     image: /assets/img/uploads/japo.jpg
     name: JAPO ROLLS
   - desc: >-
@@ -56,3 +56,12 @@ sets:
       פטריות שיטאקי, טוגראשי
     image: /assets/img/uploads/bowls.jpeg
     name: HOT BOWL
+  - desc: התעוררנו יצירתיים? לכו על זה
+    image: /assets/img/uploads/salmon-roll@2x.png
+    name: JAPO FREESTYLE
+  - desc: אורז לבן | אורז מלא | בורגול | עלים ירוקים | קייל
+    image: /assets/img/uploads/step1.png
+    name: START WITH A BASE
+  - desc: ירקות | אצות ווקאמה | ג׳ינג׳ר כבוש | פירות
+    image: /assets/img/uploads/step2.png
+    name: PICK YOUR VEGGIES
