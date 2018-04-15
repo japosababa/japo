@@ -65,3 +65,15 @@ sets:
   - desc: ירקות | אצות ווקאמה | ג׳ינג׳ר כבוש | פירות
     image: /assets/img/uploads/step2.png
     name: PICK YOUR VEGGIES
+  - desc: דגים טריים | דגים מעושנים | טופו פריך | פטריות פורטובלו בדבש סויה וג'ינג'ר
+    image: /assets/img/uploads/step3.png
+    name: SELECT YOUR PROTEIN
+  - desc: >-
+      איולי ג'ינג'ר | ספייסי מיונז | איולי סיראצה וליים | סויה איולי בזיליקום |
+      איולי קארי ולימון | צ'ימיצ'ורי אסיאתי | ויניגרט צ'ילי ומנגו | רוטב פונזו |
+      שמן זית | מיץ לימון | איולי טחינה סילאן ג'ינג'ר וכוסברה
+    image: /assets/img/uploads/step4.png
+    name: ADD HOMEMADE SAUCE
+  - desc: אגוזים | שקדים | בוטנים מסוכרים
+    image: /assets/img/uploads/step5.png
+    name: CHOOSE YOUR TOPPING
