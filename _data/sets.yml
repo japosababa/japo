@@ -38,24 +38,24 @@ sets:
     name: SMOKY JAPO
   - image: /assets/img/uploads/chicken-roll@2x.png
   - desc: קערות אורז עם תוספות
-    image: /assets/img/uploads/japo.jpg
+    image: /assets/img/uploads/how-to-japo.png
     name: JAPO BOWLS
   - desc: >-
       ג׳אפו בול אטלנטי - סלמון טרי, ברוקולי, אצות וואקמה, ג'ינג'ר כבוש, אבוקדו,
       פולי סויה, נבטים צנוניות, שומשום קלוי, פתיתי טמפורה, איולי ג'ינג'ר וליים,
       צ'ימיצ'ורי אסיאתי
-    image: /assets/img/uploads/bowls.jpeg
+    image: /assets/img/uploads/bowl-2.png
     name: ATLANTIC JAPO BOWL
   - desc: >-
       ג׳אפו בול יפני - טונה אדומה, בצל ירוק וסגול, אבוקדו, שומשום קלוי, צ'יפס
       בטטה, פולי סויה, אצות וואקמה, סלק, ברוקולי, ספייסי מיונז, צ'ימיצ'ורי
       אסיאתי
-    image: /assets/img/uploads/bowls.jpeg
+    image: /assets/img/uploads/bowl-3.png
     name: JAPANESE JAPO BOWL
   - desc: >-
       מרק בציר אסייאתי קערת מרק עשירה: בצל ירוק, נבטים, אצות וואקמה, טופו פריך,
       פטריות שיטאקי, טוגראשי
-    image: /assets/img/uploads/bowls.jpeg
+    image: /assets/img/uploads/bowl1.png
     name: HOT BOWL
   - desc: התעוררנו יצירתיים? לכו על זה
     image: /assets/img/uploads/salmon-roll@2x.png
@@ -78,5 +78,15 @@ sets:
   - desc: אגוזים | שקדים | בוטנים מסוכרים
     image: /assets/img/uploads/step5.png
     name: CHOOSE YOUR TOPPING
-  - desc: משהו מתוק
+  - desc: כזה עוד לא טעמת!
+    image: /assets/img/uploads/japo.jpg
     name: JAPO SWEET
+  - desc: 'גלידה קרם קוקוס, רוטב מנגו, אננס צלוי, קוקוס קלוי, בוטנים'
+    image: /assets/img/uploads/bowls.jpeg
+    name: BOWL
+  - desc: כדור גלידה עטוף בבצק אורז
+    image: /assets/img/uploads/bowls.jpeg
+    name: מוצ'י
+  - desc: 'בננה צלוייה ופונדט שוקולד אגוזים, קוקוס קלוי, שקדים קלויים'
+    image: /assets/img/uploads/bowls.jpeg
+    name: ROLL
