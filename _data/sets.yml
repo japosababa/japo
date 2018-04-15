@@ -36,3 +36,23 @@ sets:
       תיבול, שאלוט פריך
     image: /assets/img/uploads/roll.png
     name: SMOKY JAPO
+  - desc: קערות אורז עם תוספות
+    image: /assets/img/uploads/japo.jpg
+    name: JAPO BOWLS
+  - desc: >-
+      ג׳אפו בול אטלנטי - סלמון טרי, ברוקולי, אצות וואקמה, ג'ינג'ר כבוש, אבוקדו,
+      פולי סויה, נבטים צנוניות, שומשום קלוי, פתיתי טמפורה, איולי ג'ינג'ר וליים,
+      צ'ימיצ'ורי אסיאתי
+    image: /assets/img/uploads/bowls.jpeg
+    name: ATLANTIC JAPO BOWL
+  - desc: >-
+      ג׳אפו בול יפני - טונה אדומה, בצל ירוק וסגול, אבוקדו, שומשום קלוי, צ'יפס
+      בטטה, פולי סויה, אצות וואקמה, סלק, ברוקולי, ספייסי מיונז, צ'ימיצ'ורי
+      אסיאתי
+    image: /assets/img/uploads/bowls.jpeg
+    name: JAPANESE JAPO BOWL
+  - desc: >-
+      מרק בציר אסייאתי קערת מרק עשירה: בצל ירוק, נבטים, אצות וואקמה, טופו פריך,
+      פטריות שיטאקי, טוגראשי
+    image: /assets/img/uploads/bowls.jpeg
+    name: HOT BOWL
