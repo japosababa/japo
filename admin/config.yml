@@ -86,11 +86,12 @@ collections:
       fields:
       - {label: Close the site (show the placeholder picture instead of the site), name: placeholder, widget: boolean}
       - {label: Close the delivery page (show the "Coming Soon" placeholder instead of the delivery page), name: placeholder-delivery, widget: boolean}
-    - label: "Links"
+    - label: "Description and links"
       name: "links"
       file: "_data/meta.yml"
       delete: false
       fields:
+        - {label: Site Description (for site head), name: site-description, widget: string}
         - {label: Facebook, name: facebook, widget: string}
         - {label: Instagram, name: instagram, widget: string}
         - {label: Phone Number, name: phone, widget: string}

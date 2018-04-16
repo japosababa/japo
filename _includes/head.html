@@ -7,7 +7,7 @@
     <title>{% if page.layout == 'homepage' %}{{ site.title | escape }}{% else %}{{ site.title | escape }} | {{
         page.title | escape }}{% endif %}</title>
     <meta name="description"
-          content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+          content="{{ page.excerpt | default: site.data.meta.site-description | strip_html | normalize_whitespace | truncate: 200 | escape }}">
     <meta name="google-site-verification" content="zpZB8YRorsNZ8rGk5EMZKTLBHsbZq5n-bT2ebJJ5R58" />
 
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
