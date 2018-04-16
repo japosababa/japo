@@ -1,21 +1,92 @@
 sets:
+  - desc: הרולים שלנו - תנו לנו לעשות את העבודה
+    image: /assets/img/uploads/japo.jpg
+    name: JAPO ROLLS
   - desc: >-
-      טרטר טונה אדומה מתובלת היטב עם כרוב אדום, מלפפון, ג'ינג'ר כבוש ועשבי
-      תיבול, צ'יפס בטטה, שומשום שחור, רוטב איולי וואסבי
-    image: /assets/img/uploads/tuna-roll@2x.png
-    name: Red Tuna Roll
+      רול ג'אפו טוננא - טרטר טונה אדומה בויניגרט יוזו, איולי ג'ינג'ר, סלק, כרוב
+      אדום ועלי נענע, בצל ירוק, חסה, קשיו קלוי, מלפפונים פיקנטי, צ'יפס בטטה,
+      שומשום קלוי
+    image: /assets/img/uploads/roll.png
+    name: JAPO TUNA
   - desc: >-
-      דג קוד לבן בציפוי פאנקו עם מלפפון, צנוניות, גזר, בצל ירוק עשבי תיבול, כרוב
-      אדום, פקאן מסוכר רוטב איולי וואסבי
+      רול ג'אפו סלומון - סלמון צלוי בגלייז דבש סויה וגינג'ר, סלק, פקאן מסוכר,
+      כרוב פיקנטי, אבוקדו, חסה, עלי נענע וכוסברה, צ'יפס סלק, בצל ירוק, בטטה
+      מושחמת, איולי ג'ינג'ר
+    image: /assets/img/uploads/roll.png
+    name: JAPO SALMON
+  - desc: >-
+      רול קולי ג'אפו - כרובית צלויה וקרנץ' שבבי טמפורה, סלק, חסה, צ'יפס בטטה,
+      צ'טני פלפלים וקרם קוקוס, בצל ירוק, מלפפונים, בזיליקום, שקדים, איולי קארי
+      ולימון
+    image: /assets/img/uploads/roll.png
+    name: KULI JAPO
+  - desc: >-
+      רול ג׳אפו נא - טרטר סלמון מטובל בפונזו אננס צלוי, אבוקדו, צ'יפס בטטה, עלי
+      נענע וכוסברה, צ'ימיצ'ורי אסיאתי, שאלוט פריך, איולי סיראצה וג'ינג'ר, מלפפון
+    image: /assets/img/uploads/roll.png
+    name: RAW JAPO
+  - desc: >-
+      רול ג׳אפופ - טופו פריך בזיגוג טריאקי תאי, חצילים בצי'לי וליים, עלי נענע
+      וכוסברה, אננס צלוי, שאלוט פריך, חסה, פטריות שיטאקי צלויות, ספייסי מיונז
+    image: /assets/img/uploads/roll.png
+    name: JAPOP
+  - desc: >-
+      רול סמוקי ג׳אפו - מעורב טונה וסלמון מעושן, ויניגרט ליים, אבוקדו, תפוחים
+      בתחמיץ, חסה, מלפפון פיקנטי, צנוניות, בצל ירוק וסגול, איולי ליים ועשבי
+      תיבול, שאלוט פריך
+    image: /assets/img/uploads/roll.png
+    name: SMOKY JAPO
+  - image: /assets/img/uploads/divider.png
+  - desc: קערות אורז עם תוספות
     image: /assets/img/uploads/salmon-roll@2x.png
-    name: Salmon Fish Roll
+    name: JAPO BOWLS
   - desc: >-
-      עוף קצוץ ומתובל עם מלפפון, אבוקדו, סלק, חסה, בזיליקום עירית, שאלוט פריכים
-      איולי וואסבי
-    image: /assets/img/uploads/chicken-roll@2x.png
-    name: Crispy Chicken Roll
+      ג׳אפו בול אטלנטי - סלמון טרי, ברוקולי, אצות וואקמה, ג'ינג'ר כבוש, אבוקדו,
+      פולי סויה, נבטים צנוניות, שומשום קלוי, פתיתי טמפורה, איולי ג'ינג'ר וליים,
+      צ'ימיצ'ורי אסיאתי
+    image: /assets/img/uploads/bowl-2.png
+    name: ATLANTIC JAPO BOWL
   - desc: >-
-      כרובית מטוגנת, צ'יפס בטטה, סלק, בזיליקום, בצל ירוק חסה ושקדים קרם דלעת
-      קארי-קוקוס
-    image: /assets/img/uploads/vegie-roll@2x.png
-    name: All Vegie Roll
+      ג׳אפו בול יפני - טונה אדומה, בצל ירוק וסגול, אבוקדו, שומשום קלוי, צ'יפס
+      בטטה, פולי סויה, אצות וואקמה, סלק, ברוקולי, ספייסי מיונז, צ'ימיצ'ורי
+      אסיאתי
+    image: /assets/img/uploads/bowl-3.png
+    name: JAPANESE JAPO BOWL
+  - desc: >-
+      מרק בציר אסייאתי קערת מרק עשירה: בצל ירוק, נבטים, אצות וואקמה, טופו פריך,
+      פטריות שיטאקי, טוגראשי
+    image: /assets/img/uploads/bowl1.png
+    name: HOT BOWL
+  - desc: התעוררנו יצירתיים? לכו על זה
+    image: /assets/img/uploads/how-to-japo.png
+    name: JAPO FREESTYLE
+  - desc: אורז לבן | אורז מלא | בורגול | עלים ירוקים | קייל
+    image: /assets/img/uploads/step1.png
+    name: START WITH A BASE
+  - desc: ירקות | אצות ווקאמה | ג׳ינג׳ר כבוש | פירות
+    image: /assets/img/uploads/step2.png
+    name: PICK YOUR VEGGIES
+  - desc: דגים טריים | דגים מעושנים | טופו פריך | פטריות פורטובלו בדבש סויה וג'ינג'ר
+    image: /assets/img/uploads/step3.png
+    name: SELECT YOUR PROTEIN
+  - desc: >-
+      איולי ג'ינג'ר | ספייסי מיונז | איולי סיראצה וליים | סויה איולי בזיליקום |
+      איולי קארי ולימון | צ'ימיצ'ורי אסיאתי | ויניגרט צ'ילי ומנגו | רוטב פונזו |
+      שמן זית | מיץ לימון | איולי טחינה סילאן ג'ינג'ר וכוסברה
+    image: /assets/img/uploads/step4.png
+    name: ADD HOMEMADE SAUCE
+  - desc: אגוזים | שקדים | בוטנים מסוכרים
+    image: /assets/img/uploads/step5.png
+    name: CHOOSE YOUR TOPPING
+  - desc: כזה עוד לא טעמת!
+    image: /assets/img/uploads/japo.jpg
+    name: JAPO SWEET
+  - desc: 'גלידה קרם קוקוס, רוטב מנגו, אננס צלוי, קוקוס קלוי, בוטנים'
+    image: /assets/img/uploads/sweet.png
+    name: BOWL
+  - desc: מוצ׳י - כדור גלידה עטוף בבצק אורז
+    image: /assets/img/uploads/sweet.png
+    name: MOCHI
+  - desc: 'בננה צלוייה ופונדט שוקולד אגוזים, קוקוס קלוי, שקדים קלויים'
+    image: /assets/img/uploads/sweet.png
+    name: ROLL
