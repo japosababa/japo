@@ -61,22 +61,22 @@ sets:
     image: /assets/img/uploads/how-to-japo.png
     name: JAPO FREESTYLE
   - desc: אורז לבן | אורז מלא | בורגול | עלים ירוקים | קייל
-    image: /assets/img/uploads/arrow.png
+    image: ''
     name: START WITH A BASE
   - desc: ירקות | אצות ווקאמה | ג׳ינג׳ר כבוש | פירות
-    image: /assets/img/uploads/arrow.png
+    image: ''
     name: PICK YOUR VEGGIES
   - desc: דגים טריים | דגים מעושנים | טופו פריך | פטריות פורטובלו בדבש סויה וג'ינג'ר
-    image: /assets/img/uploads/arrow.png
+    image: ''
     name: SELECT YOUR PROTEIN
   - desc: >-
       איולי ג'ינג'ר | ספייסי מיונז | איולי סיראצה וליים | סויה איולי בזיליקום |
       איולי קארי ולימון | צ'ימיצ'ורי אסיאתי | ויניגרט צ'ילי ומנגו | רוטב פונזו |
       שמן זית | מיץ לימון | איולי טחינה סילאן ג'ינג'ר וכוסברה
-    image: /assets/img/uploads/arrow.png
+    image: ''
     name: ADD HOMEMADE SAUCE
   - desc: אגוזים | שקדים | בוטנים מסוכרים
-    image: /assets/img/uploads/arrow.png
+    image: ''
     name: CHOOSE YOUR TOPPING
   - desc: כזה עוד לא טעמת!
     image: /assets/img/uploads/japo.jpg
