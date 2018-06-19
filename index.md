@@ -3,7 +3,7 @@ title: הבית
 inHeader: false
 order: 1
 ---
-![](/assets/img/uploads/japo.jpg)
+![null](/assets/img/uploads/step1.png)
 
 # **ג׳אפו יפני בהרכבה אישית**
 
